@@ -1,13 +1,11 @@
 package main
 
 import (
-	"ch/functions"
-	"fmt"
+	"ch/fonctions"
 )
 
 func main() {
-	fmt.Println("Hello, World!")
-	functions.LaunchApp()
+	fonctions.LaunchApp()
 	// Replace with your actual application logic
 	// If you need to create the fonctions package:
 	// 1. Create a directory named "fonctions" in your project
