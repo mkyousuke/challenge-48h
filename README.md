@@ -38,7 +38,6 @@ Après le scan, le rapport généré comprend :
 
 Le rapport peut être :
 - **Exporté au format PDF** pour faciliter le partage et l’archivage.
-- **Envoyé par email** directement via l’interface web, une fois que les paramètres de messagerie ont été configurés.
 
 ## Équipe Projet
 
