@@ -12,14 +12,21 @@ body {
     color: #333;
 }
 
+/* Header */
 header {
     background: linear-gradient(135deg, #3e79b8, #4587f8);
-    padding: 10px 20px; /* Réduction de la hauteur du header */
+    padding: 10px 20px;
     border-radius: 0 0 20px 20px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     color: white;
 }
 
+/* Logo par défaut */
+.logo {
+    width: 200px; /* Ajuster selon besoin */
+}
+
+/* Titre principal */
 h1 {
     margin: 0;
     font-size: 24px;
@@ -27,25 +34,21 @@ h1 {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-/* SECTION SCANNER - Effet Glassmorphisme amélioré */
-/* SECTION SCANNER - Effet Glassmorphisme amélioré */
-/* SECTION SCANNER - Effet Glassmorphisme avec flou bleu */
+/* SECTION SCANNER - Effet Glassmorphisme */
 .scanner {
-    background: rgba(148, 183, 223, 0.1); /* Fond très transparent pour que l'effet de flou se voit */
-    backdrop-filter: blur(30px) saturate(150%) contrast(100%) hue-rotate(180deg); /* Flou + ajustement de couleur */
+    background: rgba(148, 183, 223, 0.1);
+    backdrop-filter: blur(30px) saturate(150%) contrast(100%) hue-rotate(180deg);
     padding: 40px;
     margin: 300px auto;
     width: 90%;
     max-width: 600px;
     border-radius: 20px;
-    border: 1px solid rgba(138, 163, 218, 0.3); /* Bordure subtile mais transparente */
-    box-shadow: 0px 4px 12px rgba(132, 171, 239, 0.968); /* Ombre pour ajouter de la profondeur */
+    border: 1px solid rgba(138, 163, 218, 0.3);
+    box-shadow: 0px 4px 12px rgba(132, 171, 239, 0.968);
     text-align: center;
 }
 
-
-
-
+/* Texte */
 h2 {
     color: #444;
     font-size: 20px;
@@ -109,18 +112,68 @@ button:hover {
     color: #c0392b;
 }
 
+/* FOOTER */
 footer {
     position: fixed;
     bottom: 0;
     left: 0;
-    width: 100%; /* Reste sur toute la largeur */
-    background: #f0f0f0; /* Fond neutre pour un footer discret */
-    color: #333; /* Couleur du texte foncé pour contraster légèrement */
-    padding: 10px 0; /* Hauteur du footer réduite */
-    font-size: 12px; /* Réduction de la taille du texte */
+    width: 100%;
+    background: #f0f0f0;
+    color: #333;
+    padding: 10px 0;
+    font-size: 12px;
     text-align: center;
     border-radius: 15px 15px 0 0;
-    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.05); /* Ombre discrète */
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.05);
 }
 
+/* 🌙 MODE NUIT */
+.dark-mode {
+    background: url('/static/images/logo-dark.jpg') no-repeat center calc(100% - 595px);
+    background-size: 60%;
+    color: #f9f7f7;
+    background-color: white;
+}
 
+/* Changer le logo en mode nuit */
+.dark-mode .logo {
+    content: url('/static/images/logo-dark.jpg');
+}
+
+/* Header en mode nuit */
+.dark-mode header {
+    background: linear-gradient(135deg, #1e3a8a, #1e40af);
+}
+
+/* Scanner en mode nuit */
+.dark-mode .scanner {
+    background: rgba(180, 181, 241, 0.904);
+    border: 1px solid rgba(192, 189, 242, 0.3);
+    box-shadow: 0px 4px 12px rgba(176, 186, 249, 0.9);
+    margin: 300px auto;
+}
+
+/* Formulaire en mode nuit */
+.dark-mode input[type="url"] {
+    background: rgba(244, 249, 246, 0.2);
+    color: #f7f6f6;
+}
+
+.dark-mode input[type="url"]::placeholder {
+    color: #bbb;
+}
+
+/* Bouton en mode nuit */
+.dark-mode button {
+    background: linear-gradient(135deg, #631ee1, #811ede);
+}
+
+.dark-mode button:hover {
+    background: linear-gradient(135deg, #6ba4f9, #4a90e2);
+}
+
+/* Footer en mode nuit */
+.dark-mode footer {
+    background: #f9f9f9;
+    color: #bbb;
+}
