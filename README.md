@@ -79,4 +79,4 @@ Chaque membre apporte son expertise, que ce soit en informatique ou en cyberséc
 
 ## Licence
 
-WPS48. CC BY-NY_ND 4.0.
+CH48H. CC BY-NY_ND 4.0.
