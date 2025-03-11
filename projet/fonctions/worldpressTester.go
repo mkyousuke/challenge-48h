@@ -41,3 +41,4 @@ func IsWordPressSite(url string) error {
 
 	return errors.New("le site n'est pas un site WordPress")
 }
+

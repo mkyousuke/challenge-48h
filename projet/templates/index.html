@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audit de Sécurité WordPress</title>
+    <link rel="stylesheet" href="/static/styles/styles.css">
+</head>
+<body>
+    <header>
+        <h1>🔍 Audit de Sécurité WordPress</h1>
+    </header>
+    
+    <main>
+        <section class="scanner">
+            <h2>Analysez votre site WordPress</h2>
+            <p>Entrez l'URL de votre site WordPress pour vérifier ses vulnérabilités.</p>
+            <form id="scan-form" action="/check-wordpress" method="post">
+                <input type="url" name="site-url" id="site-url" placeholder="https://exemple.com" required>
+                <button type="submit">Analyser</button>
+            </form>
+            <div id="result"></div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 - Sécurité WordPress Scanner</p>
+    </footer>
+
+    <script>
+        document.getElementById('scan-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const url = document.getElementById('site-url').value;
+            fetch('/check-wordpress', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: `site-url=${encodeURIComponent(url)}`
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('result').textContent = data.result;
+            })
+            .catch(() => {
+                document.getElementById('result').textContent = '❌ Erreur lors de la vérification du site.';
+            });
+        });
+    </script>
+</body>
+</html>
