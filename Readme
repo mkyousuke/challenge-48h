@@ -4,7 +4,7 @@ Ce projet a pour objectif de créer une plateforme web capable d’analyser des 
 
 ## Présentation
 
-Ce projet offre une solution centralisée pour réaliser des scans de sécurité sur des sites WordPress. Il exploite WPScan pour récupérer diverses informations techniques (version de WordPress, plugins, thèmes, etc.) et fournit aux utilisateurs un rapport détaillé. Le système est adapté tant aux professionnels qu’aux étudiants souhaitant s’initier à la cybersécurité des sites web.
+Ce projet offre une solution centralisée pour réaliser des scans de sécurité sur des sites WordPress. Il exploite WPScan pour récupérer diverses informations techniques (version de WordPress, plugins, thèmes, etc.) et fournit aux utilisateurs un rapport détaillé.
 
 ## Objectifs
 
@@ -31,7 +31,7 @@ Ce projet offre une solution centralisée pour réaliser des scans de sécurité
   ```
 
 - **Ruby :** WPScan étant développé en Ruby, assurez-vous que Ruby et ses dépendances sont installés.
-- **Configuration de l’API WPScan :** Pour accéder aux données de vulnérabilités, vous aurez besoin d’un token API (disponible sur [wpscan.com](https://wpscan.com)).
+
 
 ## Installation
 
@@ -79,20 +79,8 @@ L’équipe se compose de neuf membres répartis selon les filières et niveaux 
 
 Chaque membre apporte son expertise, que ce soit en informatique ou en cybersécurité, afin de garantir la qualité et la robustesse de l’application.
 
-## Contribution
-
-Les contributions extérieures et les améliorations sont les bienvenues.  
-Pour contribuer :
-- Forkez ce dépôt.
-- Créez une branche spécifique pour vos modifications.
-- Soumettez une pull request en détaillant les changements apportés.
-
 ## Licence
 
-Précisez ici la licence sous laquelle le projet est diffusé (par exemple, MIT License).
+Mettre la licence MIT
 
-## Contact
 
-Pour toute question ou suggestion concernant le projet, vous pouvez nous contacter via :
-- L’interface du dépôt GitHub
-- L’adresse email : [votre.email@example.com]
