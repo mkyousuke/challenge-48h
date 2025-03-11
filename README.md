@@ -51,7 +51,7 @@ Ce projet offre une solution centralisée pour réaliser des scans de sécurité
 Pour lancer l’analyse d’une URL, vous pouvez utiliser l’interface web du projet ou directement exécuter le script de scan. Par exemple, en ligne de commande :
 
 ```bash
-./run_scan.sh --url http://votresite.com
+./run_scan.sh --url "mettre l'url du site"
 ```
 
 Le script exécutera WPScan avec les options définies (extraction de plugins, thèmes, backups, etc.) et générera un rapport contenant toute l’analyse effectuée. Les options de WPScan (comme l’énumération des plugins vulnérables avec `-e vp` ou des thèmes vulnérables avec `-e vt`) peuvent être personnalisées en fonction de vos besoins.
