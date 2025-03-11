@@ -79,6 +79,28 @@
             window.location.href = `/generatepdf?url=${encodeURIComponent(url)}`;
         }
     </script>
+    <script>
+        const toggleButton = document.getElementById("mode-toggle");
+        const body = document.body;
+    
+        // Vérifier si le mode sombre est activé dans le stockage local
+        if (localStorage.getItem("dark-mode") === "enabled") {
+            body.classList.add("dark-mode");
+            toggleButton.textContent = "☀️ ";
+        }
+    
+        toggleButton.addEventListener("click", () => {
+            if (body.classList.contains("dark-mode")) {
+                body.classList.remove("dark-mode");
+                localStorage.setItem("dark-mode", "disabled");
+                toggleButton.textContent = "🌙 ";
+            } else {
+                body.classList.add("dark-mode");
+                localStorage.setItem("dark-mode", "enabled");
+                toggleButton.textContent = "☀️";
+            }
+        });
+    </script>
     
 </body>
 </html>
