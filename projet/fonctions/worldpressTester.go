@@ -42,8 +42,6 @@ func IsWordPressSite(url string) error {
 
 	return errors.New("le site n'est pas un site WordPress")
 }
-<<<<<<< Updated upstream
-=======
 
 func CheckWordPressHandler(w http.ResponseWriter, r *http.Request) {
 	if r.Method != http.MethodPost {
@@ -64,4 +62,3 @@ func CheckWordPressHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	json.NewEncoder(w).Encode(response)
 }
->>>>>>> Stashed changes
