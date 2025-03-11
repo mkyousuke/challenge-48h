@@ -1,75 +1,126 @@
+/* Style général */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Poppins', sans-serif;
+    background: url('/static/images/cyberphiles.png') no-repeat center calc(100% - 595px);
+    background-size: 60%;
     margin: 0;
     padding: 0;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #333;
 }
 
 header {
-    background-color: #0073aa;
+    background: linear-gradient(135deg, #3e79b8, #4587f8);
+    padding: 10px 20px; /* Réduction de la hauteur du header */
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     color: white;
-    padding: 20px;
 }
 
 h1 {
     margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
+/* SECTION SCANNER - Effet Glassmorphisme amélioré */
+/* SECTION SCANNER - Effet Glassmorphisme amélioré */
+/* SECTION SCANNER - Effet Glassmorphisme avec flou bleu */
 .scanner {
-    background: white;
+    background: rgba(148, 183, 223, 0.1); /* Fond très transparent pour que l'effet de flou se voit */
+    backdrop-filter: blur(30px) saturate(150%) contrast(100%) hue-rotate(180deg); /* Flou + ajustement de couleur */
     padding: 40px;
-    margin: 50px auto;
+    margin: 300px auto;
     width: 90%;
     max-width: 600px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    border: 1px solid rgba(138, 163, 218, 0.3); /* Bordure subtile mais transparente */
+    box-shadow: 0px 4px 12px rgba(132, 171, 239, 0.968); /* Ombre pour ajouter de la profondeur */
+    text-align: center;
 }
 
+
+
+
 h2 {
-    color: #0073aa;
+    color: #444;
+    font-size: 20px;
 }
 
 p {
-    color: #333;
+    color: #555;
 }
 
+/* FORMULAIRE */
 form {
     margin-top: 20px;
 }
 
 input[type="url"] {
     width: 80%;
-    padding: 10px;
+    padding: 12px;
     font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    transition: 0.3s;
+    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+input[type="url"]::placeholder {
+    color: #777;
+}
+
+input[type="url"]:focus {
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* BOUTON */
 button {
-    background-color: #0073aa;
-    color: white;
+    background: linear-gradient(135deg, hsl(219, 67%, 72%), hsl(216, 71%, 67%));
     border: none;
-    padding: 10px 20px;
+    font-weight: bold;
+    color: white;
+    padding: 12px 24px;
     font-size: 16px;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 15px;
+    transition: 0.3s;
+    box-shadow: 0px 4px 10px rgba(149, 154, 245, 0.988);
 }
 
 button:hover {
-    background-color: #005a87;
+    background: linear-gradient(135deg, #a4bbfd, #708bbf);
+    box-shadow: 0px 4px 12px rgba(115, 158, 219, 0.825);
 }
 
+/* RÉSULTAT */
 #result {
     margin-top: 20px;
     font-weight: bold;
-    color: #d9534f;
+    color: #c0392b;
 }
 
 footer {
-    margin-top: 50px;
-    background: #0073aa;
-    color: white;
-    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Reste sur toute la largeur */
+    background: #f0f0f0; /* Fond neutre pour un footer discret */
+    color: #333; /* Couleur du texte foncé pour contraster légèrement */
+    padding: 10px 0; /* Hauteur du footer réduite */
+    font-size: 12px; /* Réduction de la taille du texte */
+    text-align: center;
+    border-radius: 15px 15px 0 0;
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.05); /* Ombre discrète */
 }
+
+

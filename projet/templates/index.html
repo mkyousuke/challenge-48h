@@ -8,15 +8,15 @@
 </head>
 <body>
     <header>
-        <h1>Audit de Sécurité WordPress</h1>
+        <h1>🔍 Audit de Sécurité WordPress</h1>
     </header>
     
     <main>
         <section class="scanner">
             <h2>Analysez votre site WordPress</h2>
             <p>Entrez l'URL de votre site WordPress pour vérifier ses vulnérabilités.</p>
-            <form id="scan-form">
-                <input type="url" id="site-url" placeholder="https://exemple.com" required>
+            <form id="scan-form" action="/check-wordpress" method="post">
+                <input type="url" name="site-url" id="site-url" placeholder="https://exemple.com" required>
                 <button type="submit">Analyser</button>
             </form>
             <div id="result"></div>
@@ -26,7 +26,36 @@
     <footer>
         <p>&copy; 2025 - Sécurité WordPress Scanner</p>
     </footer>
-    
-    <!-- <script src="script.js"></script> -->
+
+    <script>
+        document.getElementById('scan-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const url = document.getElementById('site-url').value;
+            fetch('/check-wordpress', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: `site-url=${encodeURIComponent(url)}`
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.result.includes('est un site WordPress')) {
+                    document.getElementById('result').innerHTML = `
+                        ${data.result}
+                        <br>
+                        <button onclick="generatePdf('${url}')">📥 Télécharger le rapport PDF</button>
+                    `;
+                } else {
+                    document.getElementById('result').textContent = data.result;
+                }
+            })
+            .catch(() => {
+                document.getElementById('result').textContent = '❌ Erreur lors de la vérification du site.';
+            });
+        });
+
+        function generatePdf(url) {
+            window.location.href = `/generatepdf?url=${encodeURIComponent(url)}`;
+        }
+    </script>
 </body>
 </html>

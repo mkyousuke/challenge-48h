@@ -74,13 +74,9 @@ L’équipe se compose de neuf membres répartis selon les filières et niveaux 
 
 - **B1 Info :** Emmanuel, Ilyes, Katia, Julien
 - **B1 Cyber :** Maxime, Léna
-- **B3 Cyber :** Hugo, Colin
-- **B3 Info :** Frederick
 
 Chaque membre apporte son expertise, que ce soit en informatique ou en cybersécurité, afin de garantir la qualité et la robustesse de l’application.
 
 ## Licence
 
 Mettre la licence MIT
-
-
