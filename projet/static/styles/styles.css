@@ -1,7 +1,7 @@
 /* Style général */
 body {
     font-family: 'Poppins', sans-serif;
-    background: url('/static/images/cyberphiles.png') no-repeat center calc(100% - 595px);
+    background: url('/static/images/cyberphiles.png') no-repeat center calc(100% - 810px);
     background-size: 60%;
     margin: 0;
     padding: 0;
@@ -39,7 +39,7 @@ h1 {
     background: rgba(148, 183, 223, 0.1);
     backdrop-filter: blur(30px) saturate(150%) contrast(100%) hue-rotate(180deg);
     padding: 40px;
-    margin: 300px auto;
+    margin: 500px auto;
     width: 90%;
     max-width: 600px;
     border-radius: 20px;
@@ -129,7 +129,7 @@ footer {
 
 /* 🌙 MODE NUIT */
 .dark-mode {
-    background: url('/static/images/logo-dark.jpg') no-repeat center calc(100% - 595px);
+    background: url('/static/images/logo-dark.jpg') no-repeat center calc(100% - 850px);
     background-size: 60%;
     color: #f9f7f7;
     background-color: white;
@@ -150,7 +150,7 @@ footer {
     background: rgba(180, 181, 241, 0.904);
     border: 1px solid rgba(192, 189, 242, 0.3);
     box-shadow: 0px 4px 12px rgba(176, 186, 249, 0.9);
-    margin: 300px auto;
+    margin: 500px auto;
 }
 
 /* Formulaire en mode nuit */
