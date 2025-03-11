@@ -42,7 +42,6 @@ func CheckVulnerabilities(url string) map[string]string {
 	} else {
 		vulnerabilities["SQL Injection"] = "No SQL injection vulnerability detected."
 	}
-
 	// Add more vulnerability checks as needed
 
 	return vulnerabilities
