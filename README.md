@@ -79,4 +79,4 @@ Chaque membre apporte son expertise, que ce soit en informatique ou en cyberséc
 
 ## Licence
 
-Mettre la licence MIT
+CH48H. CC BY-NY_ND 4.0.
