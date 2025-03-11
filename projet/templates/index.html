@@ -26,7 +26,7 @@
     <footer>
         <p>&copy; 2025 - Sécurité WordPress Scanner</p>
     </footer>
-
+    
     <script>
         document.getElementById('scan-form').addEventListener('submit', function(event) {
             event.preventDefault();
@@ -38,24 +38,45 @@
             })
             .then(response => response.json())
             .then(data => {
+                const resultDiv = document.getElementById('result');
+                resultDiv.innerHTML = `${data.result}<br>`;
+    
                 if (data.result.includes('est un site WordPress')) {
-                    document.getElementById('result').innerHTML = `
-                        ${data.result}
-                        <br>
-                        <button onclick="generatePdf('${url}')">📥 Télécharger le rapport PDF</button>
-                    `;
-                } else {
-                    document.getElementById('result').textContent = data.result;
+                    // Bouton pour afficher les détails
+                    const detailsButton = document.createElement('button');
+                    detailsButton.textContent = 'Voir les détails de l\'analyse';
+                    detailsButton.onclick = function() {
+                        const detailsDiv = document.createElement('div');
+                        for (const key in data) {
+                            if (key !== 'result') {
+                                const p = document.createElement('p');
+                                p.textContent = `${key}: ${data[key]}`;
+                                detailsDiv.appendChild(p);
+                            }
+                        }
+                        resultDiv.appendChild(detailsDiv);
+                    };
+                    resultDiv.appendChild(detailsButton);
+    
+                    // Bouton pour télécharger le PDF
+                    const pdfButton = document.createElement('button');
+                    pdfButton.textContent = '📥 Télécharger le rapport PDF';
+                    pdfButton.onclick = function() {
+                        generatePdf(url);
+                    };
+                    resultDiv.appendChild(document.createElement('br'));
+                    resultDiv.appendChild(pdfButton);
                 }
             })
             .catch(() => {
                 document.getElementById('result').textContent = '❌ Erreur lors de la vérification du site.';
             });
         });
-
+    
         function generatePdf(url) {
             window.location.href = `/generatepdf?url=${encodeURIComponent(url)}`;
         }
     </script>
+    
 </body>
 </html>
