@@ -10,6 +10,7 @@ func Server(port int) {
 		http.ServeFile(w, r, "templates/index.html")
 	})
 	http.HandleFunc("/check-wordpress", CheckWordPressHandler)
+	http.HandleFunc("/generatepdf", GeneratePDFHandler)
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
 	fmt.Printf("Server running on http://localhost:%d\n", port)
 	http.ListenAndServe(fmt.Sprintf(":%d", port), nil)

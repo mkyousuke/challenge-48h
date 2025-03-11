@@ -38,12 +38,24 @@
             })
             .then(response => response.json())
             .then(data => {
-                document.getElementById('result').textContent = data.result;
+                if (data.result.includes('est un site WordPress')) {
+                    document.getElementById('result').innerHTML = `
+                        ${data.result}
+                        <br>
+                        <button onclick="generatePdf('${url}')">📥 Télécharger le rapport PDF</button>
+                    `;
+                } else {
+                    document.getElementById('result').textContent = data.result;
+                }
             })
             .catch(() => {
                 document.getElementById('result').textContent = '❌ Erreur lors de la vérification du site.';
             });
         });
+
+        function generatePdf(url) {
+            window.location.href = `/generatepdf?url=${encodeURIComponent(url)}`;
+        }
     </script>
 </body>
 </html>
