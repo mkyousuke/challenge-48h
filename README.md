@@ -41,7 +41,7 @@ Le rapport peut être :
 
 ## Équipe Projet
 
-L’équipe se compose de neuf membres répartis selon les filières et niveaux :
+L’équipe se compose de 6 membres répartis selon les filières et niveaux :
 
 - **B1 Info :** Emmanuel, Ilyes, Katia, Julien
 - **B1 Cyber :** Maxime, Léna
